@@ -16,6 +16,7 @@
   font-family: var(--font-poppins);
 }
 .mask {
+  object-fit: contain;
   -webkit-mask-image: url(/mask.png); 
   mask-image: url(/mask.png);
   -webkit-mask-repeat: no-repeat;
