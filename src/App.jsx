@@ -21,7 +21,7 @@ const App = () => {
           </span>
         </nav>
 
-        <section className="w-screen h-max bg-amber-300 p-5 flex flex-col gap-5 md:flex-row justify-center items-center">
+        <section className="w-screen h-max bg-red-50 p-5 flex flex-col gap-5 md:flex-row justify-center items-center">
           <div className="flex flex-col gap-5 md:pl-10">
             <div className="flex flex-col gap-4">
               <h1 className="text-5xl/15 font-bold ">
