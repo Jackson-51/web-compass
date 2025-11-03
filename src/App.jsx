@@ -21,6 +21,28 @@ const App = () => {
       caption: "Find the quickest route to your destination with real-time navigation assistance."
     }
   ]
+  const feature = [
+    {
+      icon: "/book.png", 
+      name: "Locate Faculties & Departments",
+      caption: "Find any faculty, department, or academic building instantly."
+    },
+    {
+      icon: "/home.png", 
+      name: "Find Hostels & Libraries",
+      caption: "Navigate to student hostels and library facilities with ease."
+    },
+    {
+      icon: "/food.png", 
+      name: "Discover Cafeterias & Sports Centers",
+      caption: "Locate dining halls, cafeterias, and recreational facilities."
+    },
+    {
+      icon: "/calendar.png", 
+      name: "Track Live Events and Lectures",
+      caption: "Stay updated with real-time event locations and schedules."
+    }
+  ]
   return(
     <div className="relative w-screen h-screen flex flex-col">
         <nav className="bg-white sticky z-100 top-0 w-full flex justify-between items-center p-4">
@@ -47,13 +69,13 @@ const App = () => {
             initial={{ x: '-100%' }}
             animate={slide ? { x: 20 } : { x: '-100%' }}
             transition={{ type: 'spring', duration: 0.35 }}
-            className="absolute left-0 top-20 flex md:hidden flex-col rounded-2xl overflow-hidden bg-[#00000063] backdrop-blur-3xl z-40"
+            className="absolute left-0 top-20 flex md:hidden flex-col rounded-2xl overflow-hidden bg-white border border-(--gray3) z-40"
             aria-hidden={!slide}
           >
-            <Link to="/" className="flex items-center gap-3 py-3 px-5 text-white hover:bg-[#0000002d]"><i className="fa-solid fa-person-chalkboard"></i>Features</Link>
-            <Link to="/" className="flex items-center gap-3 py-3 px-5 text-white hover:bg-[#0000002d]"><i className="fa-solid fa-location-dot"></i>Maps</Link>
-            <Link to="/" className="flex items-center gap-3 py-3 px-5 text-white hover:bg-[#0000002d]"><i className="fa-regular fa-comment"></i>Testimonials</Link>
-            <Link to="/" className="flex items-center gap-3 py-3 px-5 text-white hover:bg-[#0000002d]"><i className="fa-regular fa-address-book"></i>Contact</Link>
+            <Link to="/" className="flex items-center gap-3 py-3 px-5 text-gray-800 hover:bg-[#0000002d]"><i className="fa-solid fa-person-chalkboard"></i>Features</Link>
+            <Link to="/" className="flex items-center gap-3 py-3 px-5 text-gray-800 hover:bg-[#0000002d]"><i className="fa-solid fa-location-dot"></i>Maps</Link>
+            <Link to="/" className="flex items-center gap-3 py-3 px-5 text-gray-800 hover:bg-[#0000002d]"><i className="fa-regular fa-comment"></i>Testimonials</Link>
+            <Link to="/" className="flex items-center gap-3 py-3 px-5 text-gray-800 hover:bg-[#0000002d]"><i className="fa-regular fa-address-book"></i>Contact</Link>
           </motion.div>
         </nav>
 
@@ -109,8 +131,25 @@ const App = () => {
 
           <div className="flex flex-col w-full p-3 gap-5 md:flex-row items-center justify-center">
             {clients.map((item, i) => (
-              <div key={i} className="flex flex-col gap-3 p-5 border border-gray-300 hover:border-(--baseColor) hover:shadow-2xl hover:scale-102 transition duration-100 bg-red-50 rounded-2xl">
+              <div key={i} className="flex flex-col gap-3 p-5 border border-gray-300 transition duration-100 bg-red-50 rounded-3xl hover">
                 <i className={item.icon + " text-5xl text-gray-800"}></i>
+                <h1 className="text-2xl font-bold text-gray-800">{item.name}</h1>
+                <small className="text-gray-600">{item.caption}</small>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="flex flex-col items-center w-full h-max py-10 gap-5 bg-red-50">
+          <h1 className="text-3xl font-bold text-center text-gray-900">
+            What You Can Do<br/> With
+            <p className="text-(--baseColor)">UNILAG Map</p>
+          </h1>
+
+          <div className="flex flex-col w-full p-3 gap-5 md:flex-row items-center justify-center">
+            {feature.map((item, i) => (
+              <div key={i} className="w-full flex flex-col gap-3 p-5 border border-gray-300 transition duration-100 bg-white rounded-3xl hover">
+                <span className="size-15 bg-red-50 flex justify-center items-center rounded-2xl"><img src={item.icon} alt="icon" className="size-8"/></span>
                 <h1 className="text-2xl font-bold text-gray-800">{item.name}</h1>
                 <small className="text-gray-600">{item.caption}</small>
               </div>
