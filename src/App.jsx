@@ -26,7 +26,7 @@ const App = () => {
         <nav className="bg-white sticky z-100 top-0 w-full flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
             <img src="/logoMap.png" alt="map logo" className="size-10"/>
-            <h1>UNILAG MAP</h1>
+            <h1>UNILAG COMPASS</h1>
           </div>
 
           <div className="hidden md:flex items-center gap-6">
@@ -63,7 +63,7 @@ const App = () => {
               <h1 className="text-5xl/15 font-bold ">
                 <p className="text-(--baseColor)">Explore the</p>
                 University of Lagos Campus
-                <p className="text-(--baseColor)">with Ease</p>
+                <p className="text-(--baseColor)">with Ease </p>
               </h1>
               <small className="text-(--gray4)">Find buildings, faculties, hostels, and landmarks instantly. Navigate UNILAG like never before.</small>
             </div>
