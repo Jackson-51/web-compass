@@ -77,11 +77,11 @@ const App = () => {
             </div>
 
             <div className="flex items-center gap-5">
-              <button className="cursor-pointer px-8 py-4.5 bg-(--baseColor) rounded-3xl text-gray-50 font-bold flex items-center gap-2">
+              <button className="cursor-pointer px-5 md:px-8 py-2 md:py-4.5 bg-(--baseColor) rounded-3xl text-gray-50 font-bold flex items-center gap-1 md:gap-2">
                 Get Started 
                 <i className="fa-solid fa-angle-right"></i>
               </button>
-              <button className="cursor-pointer px-8 py-4.5 border border-(--baseColor) text-(--baseColor) rounded-3xl font-bold">
+              <button className="cursor-pointer px-5 md:px-8 py-2 md:py-4.5 border border-(--baseColor) text-(--baseColor) rounded-3xl font-bold">
                 View Map
               </button>
             </div>
